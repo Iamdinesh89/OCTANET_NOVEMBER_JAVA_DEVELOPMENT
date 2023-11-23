@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Atm_Interface {
+	public static void main(String[] args) {
+        // Authenticate the user
+        if (authenticateUser()) {
+            // Display the main menu
+            displayMainMenu();
+        } else {
+            System.out.println("Authentication failed. Exiting.");
+        }
+    }
+
+    public static boolean authenticateUser() {
+        // Implement user authentication logic here
+        // Return true if authentication is successful, false otherwise
+        return true; // Replace with your authentication logic
+    }
+
+    public static void displayMainMenu() {
+        while (true) {
+            System.out.println("Main Menu:");
+            System.out.println("1. Transactions History");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Deposit");
+            System.out.println("4. Transfer");
+            System.out.println("5. Quit");
+
+            // Read user choice and implement corresponding functionality
+            int choice = getUserChoice();
+            switch (choice) {
+                case 1:
+                    // Implement transaction history functionality
+                    break;
+                case 2:
+                    // Implement withdrawal functionality
+                    break;
+                case 3:
+                    // Implement deposit functionality
+                    break;
+                case 4:
+                    // Implement transfer functionality
+                    break;
+                case 5:
+                    // Quit the application
+                    System.out.println("Exiting the ATM system. Goodbye!");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please select a valid option.");
+            }
+        }
+    }
+
+    public static int getUserChoice() {
+        // Implement code to read and return the user's choice
+        return 0; // Replace with your input logic
+    }
+}
